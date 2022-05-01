@@ -19,20 +19,21 @@
               Mini taller Jwt
             </h3>
           </div>
-            <div class="col-md-6 d-block">
-                <form>
+            <div class="col-md-6" id="jwt-div-form" style="display: block;">
+                <form id="jwt-formulario">
                     <div class="form-group">
-                      <label for="exampleInputEmail1">Email address</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                      <label for="jwt-email">Email address</label>
+                      <input type="email" class="form-control" id="jwt-email" aria-describedby="emailHelp">
                     </div>
                     <div class="form-group">
-                      <label for="exampleInputPassword1">Password</label>
-                      <input type="password" class="form-control" id="exampleInputPassword1">
+                      <label for="jwt-password">Password</label>
+                      <input type="password" class="form-control" id="jwt-password">
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                   </form>
             </div>
-            <div class="col-md-12 d-none"><table class="table">
+            <div class="col-md-12 " id="jwt-div-tabla" style="display: none;" >
+              <table class="table" id="jwt-tabla-post">
                 <thead>
                   <tr>
                     <th scope="col">#</th>
@@ -42,6 +43,7 @@
                   </tr>
                 </thead>
                 <tbody>
+                
                 </tbody>
               </table>
             </div>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- bootstrap css 5.0.2 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"/>
+    <title>Covid - Situacion Mundial</title>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+
+  </head>
+  
+  <body>
+
+<header>
+
+    <nav class="navbar navbar-expand-lg barra bg-dark">
+      <div class="container">
+        <a class="navbar-brand" style="color: #ffffff;" href="#">COVID19</a>    
+          <div>
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" id="btnHome" style="color: #ffffff; display: block" href="#">Home</a>
+              </li> 
+              <li class="nav-item luegodeValidar luegodeValidarOculta">
+                <a class="nav-link" id="btnSituacion" style="color: #ffffff; display: none" href="#">Situacion Chile</a>
+              </li> 
+              <li class="nav-item luegodeValidarOculta">
+                <a class="nav-link" id="btnIniciar" data-bs-toggle="modal" data-bs-target="#myModal" style="color: #ffffff; display: block;" href="#">Iniciar Sesion</a>
+              </li> 
+              <li class="nav-item luegodeValidar luegodeValidarOculta" id="CerrarSesion">
+                <a class= "nav-link" id="btnCerrar" style="color: #ffffff; display: none" href="#">Cerrar Sesion</a>
+              </li> 
+            </ul>
+          </div>    
+      </div>
+    </nav>
+    
+    <!-- modal bootstrap para usuario y contraseña e ingresar a situacion Chile -->
+
+          <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title text-center">Solo Usuarios Registrados</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+
+              <div class="modal-body">
+                <form id="js-form">
+                  <div class="mb-3">
+                    <label for="js-input-email" class="form-label">Correo Electronico</label>
+                    <input type="email" class="form-control" id="js-input-email" aria-describedby="emailHelp"/>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="js-input-password" class="form-label">Contraseña</label>
+                    <input type="password" class="form-control" id="js-input-password"/>
+                  </div>
+
+                  <button id="btnSubmit" type="submit" class="btn-form btn btn-primary">Iniciar Sesion</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </header>
+
+<br>
+    <!-- grafico principal  -->
+    <section style= "display: block;" class="container seccionMundial">
+      <div id="chartContainer1" style="height: 500px; width: 100%; margin: 0 auto"></div>
+    </section>
+
+<br>
+
+      <!-- tabla completa -->
+    <section>
+      <div class="tablaPrincipal container table table-bordered seccionMundial" style= "display: block;">
+        <table id="tablaDeDatos"></table>
+      </div>
+    </section>
+<br>
+      <!-- grafico situacion chile -->
+    <section id="seccionChile"  style= "display: none;" class="container w-100" >
+      <div class="text-center mt-5">
+      <div id="chartContainer3" style="height: 500px; width: 100%; margin: 0 auto;">
+        <span class="loader"></span>
+      </div>
+    </div>
+    </section>
+
+    <!-- bootstrap 5.0.2 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- jQuery 3.6.0 -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <!-- script Canvas -->
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <!-- script v1.0 propio -->
+    <script type="module" src="./assets/js/scripts.js"></script>
+    <!-- script v1.0 parte2-chile -->
+    <script type="module" async src="./assets/js/situacion_chile/script_chile.js"></script>
+  </body>
+</html>
